@@ -120,7 +120,7 @@ function carga2(arraychampion) {
 
                 let options = {
                   title: "The most populares Champions",
-                  width: 950,
+                  width: 400,
                   height: 370,
                   bar: { groupWidth: "95%" },
                   legend: { position: "none" },
