@@ -21,9 +21,6 @@ h4 a:hover{
   padding-top: 180px;
   }
 
-
-
-
 /* ------------------------------------------------------------------------ */
 #pName1 {
   text-align: center;
@@ -417,8 +414,7 @@ padding-top: 180px;
 #sectionHome2{
 margin-top: 190px;
   background: url(./public/wallpaperfucs.jpg);
-/*   background: url(https://cdn.game.tv/game-tv-content/images_2/mobile/game_banner/0489fb4c58b81e8685c49d3f4996745b/en/0489fb4c58b81e8685c49d3f4996745b.jpg);
- */  
+
   width: 100%;
   height: 470px;
   background-position: center;
@@ -436,7 +432,7 @@ border-radius: 20px;
 }
 
 
-.h1Home{
+#h1Home{
 text-align: center;
 color:white;
 font-size: 18px;
@@ -484,22 +480,6 @@ padding: 10px;
   margin-left: -80px;
 }
 
-/* home y champions */
-/* @media all and (max-width: 420px) {
-  #pHome {
-    max-height: 12rem;
-    text-align: center;
-    color: white;
-    padding: 1rem;
-    
-    font-size: 1.1rem !important;
-    line-height: 1.5;
-    font-family: "Lato", sans-serif;
-  }
- 
-} */
-
- 
 
 /* --------------------------END ------ index.html------------------------------------------ */
 .bannere {
@@ -614,15 +594,7 @@ padding: 10px;
   font-family: 'MedievalSharp', cursive;
   text-transform: uppercase;
 }
-/* aquiiiiiiiiiiiiiiii cambiarrr */
-/* .header-content h1 {
-  font-size: 35px;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: "MedievalSharp", cursive;
-  color: rgb(233, 212, 161);
-} */
+
 
 .header-content p {
   font-size: 18px;
@@ -730,7 +702,59 @@ padding: 10px;
   cursor: pointer;
 }
 /* --------------------------------------------aplicando media query RANKING --------------------------------------------- */
+@media all and (min-width:300px){
+  .sectionVersus{
+    height: 2000px;
+  }
+  .versus{
+    height: 1980px;
+  }
+  .versus h3{
+    font-size: 16px;
+  }
+  .graficVersus{
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
 
+  .pVersus{
+    margin: 10px;
+    padding: 20px;
+    font-size: 14px;
+    background: rgba(160, 193, 255, 0.748);
+    border-radius: 20px;
+  }
+  .tabs{
+    flex-direction: column;
+  }
+  .tabs-container{
+    margin-top: 5px 0px 0px 0px;
+    padding: 10px;
+
+  }
+  .choose{
+    flex-direction: column;
+    padding: 10px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+  .chooseChampion{
+    margin: auto;
+    margin-top: 20px;
+  }
+  h4  {
+    margin: 0;
+    padding-top: 20px;
+  }
+/*   .graficVersus{
+    margin: 0;
+    padding: 0;
+  } */
+
+}
 @media all and (min-width:360px){
   .sectionRanking{
     height: 1050px;
@@ -829,6 +853,63 @@ padding-bottom: 20px;
 
 
 }
+@media all and (min-width:500px){
+  #divimageHome{
+    display: none;
+   
+ 
+  }
+  .header{   
+    width: 100%;
+    height: 100% ;
+    }
+    .header-content{
+     padding: 0;
+     margin-top: 10px;
+    }
+    .bannere{
+      position: relative;
+      width: 100%;
+      display: block;
+      height: 100px;
+      margin-top: 10px;      
+    }
+    .bannere h4{
+      font-size: 15px;
+      margin: 0;
+      padding: 15px;
+    }
+    #sectionHome{
+     /*  margin-top: 190px; */
+        background: url(./public/wallpaperbetter.jpg);
+        width: 100%;
+        height: 470px;
+        background-position: center;
+        background-size: cover;
+        
+        padding: 20px;
+        padding-top: 290px;
+        }
+        #sectionHome2{
+          /*  margin-top: 190px; */
+             background: url( https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
+             width: 100%;
+             height: 570px;
+             background-position: center;
+             background-size: cover;
+             
+             padding: 20px;
+             padding-top: 390px;
+             }
+
+        .divHome{
+         
+            width: 70%;
+            border-radius: 20px;
+          /*   height: 320px; */
+            }
+        
+}
 @media all and (min-width:650px){
 
   .sectionRanking2{
@@ -865,8 +946,87 @@ padding: 15px;
   }
 
 }
-@media all and (min-width:1000px){
+@media all and (min-width:700px){
  
+  .header-content{
+    
+   padding: 20px;
+  /*  margin-top: 30px; */
+ 
+  }
+  .header-video {
+    height: 100%;
+  }
+  .bannere{
+    position: relative;
+    width: 100%;
+    display: block;
+    height: 100px;
+    margin-top: 25px;
+    
+  }
+  .bannere h4{
+    font-size: 15px;
+    margin: 0;
+    padding: 15px;
+   /*  margin-top: 20px; */
+  }
+
+
+
+
+
+  
+
+}
+@media all and (min-width:600px){
+
+  .graficVersus{
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+   width: 80%;
+  }
+  .tabs{
+    flex-direction: row;
+  }
+  .sectionVersus{
+    height: 1750px;
+  }
+  .versus{
+    height: 1730px;
+  }
+  }
+  
+@media all and (min-width:900px){
+  .header-content{
+
+    margin-top: 100px;
+   }
+  .choose{
+    flex-direction: row;
+    padding: 10px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+  .sectionVersus{
+    height: 1450px;
+  }
+  .versus{
+    height: 1430px;
+  }
+  .pVersus{
+    margin: 10px;
+    padding: 20px;
+    font-size: 16px;
+    background: rgba(235, 225, 149, 0.72);
+    border-radius: 20px;
+  }
+
+}
+
+@media all and (min-width:1000px){
   .sectionRanking2{
     height: 830px;
     padding: 50px;
@@ -931,107 +1091,6 @@ padding: 15px;
     color: white;
     font-family: "MedievalSharp", cursive;
     }
-}
-
-
-@media all and (min-width:500px){
-  #divimageHome{
-    display: none;
-   
- 
-  }
-  .header{   
-    width: 100%;
-    height: 100% ;
-    }
-    .header-content{
-     padding: 0;
-     margin-top: 10px;
-    }
-    .bannere{
-      position: relative;
-      width: 100%;
-      display: block;
-      height: 100px;
-      margin-top: 10px;      
-    }
-    .bannere h4{
-      font-size: 15px;
-      margin: 0;
-      padding: 15px;
-    }
-    #sectionHome{
-     /*  margin-top: 190px; */
-        background: url(./public/wallpaperbetter.jpg);
-        width: 100%;
-        height: 470px;
-        background-position: center;
-        background-size: cover;
-        
-        padding: 20px;
-        padding-top: 290px;
-        }
-        #sectionHome2{
-          /*  margin-top: 190px; */
-             background: url( https://pbs.twimg.com/media/COdcR-9UkAA3vgp.jpg);
-             width: 100%;
-             height: 570px;
-             background-position: center;
-             background-size: cover;
-             
-             padding: 20px;
-             padding-top: 390px;
-             }
-
-        .divHome{
-         
-            width: 70%;
-            border-radius: 20px;
-          /*   height: 320px; */
-            }
-        
-}
-@media all and (min-width:700px){
- 
-    .header-content{
-      
-     padding: 20px;
-    /*  margin-top: 30px; */
-   
-    }
-    .header-video {
-      height: 100%;
-    }
-    .bannere{
-      position: relative;
-      width: 100%;
-      display: block;
-      height: 100px;
-      margin-top: 25px;
-      
-    }
-    .bannere h4{
-      font-size: 15px;
-      margin: 0;
-      padding: 15px;
-     /*  margin-top: 20px; */
-    }
-
-
-
-
-
-    
-
-}
-@media all and (min-width:900px){
-  
-  .header-content{
-
-    margin-top: 100px;
-   }
-}
-@media all and (min-width:1000px){
   .bannere{  
     margin-top: 0px;    
   }
@@ -1049,16 +1108,7 @@ padding: 15px;
     padding: 20px;
     padding-top: 180px;
     }
-  /*   #sectionHome2{
-    margin-top: 190px;
-      background: url(./public/wallpaperfucs.jpg);
-      width: 100%;
-      height: 470px;
-      background-position: center;
-      background-size: cover;
-      padding: 20px;
-      padding-top: 290px;
-      } */
+ 
     .divHome{
   
     width: 35%;
@@ -1128,234 +1178,136 @@ font-family: "Flamenco";
   padding-top: 10px;
 
 }
-
-}
-
-@media all and (min-width:300px){
-  .sectionVersus{
-    height: 2000px;
-  }
-  .versus{
-    height: 1980px;
-  }
-  .versus h3{
-    font-size: 16px;
-  }
-  .graficVersus{
-    height: 400px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .pVersus{
-    margin: 10px;
-    padding: 20px;
-    font-size: 14px;
-    background: rgba(160, 193, 255, 0.748);
-    border-radius: 20px;
-  }
-  .tabs{
-    flex-direction: column;
-  }
-  .tabs-container{
-    margin-top: 5px 0px 0px 0px;
-    padding: 10px;
-
-  }
-  .choose{
-    flex-direction: column;
-    padding: 10px;
-    margin-top: -40px;
-    margin-bottom: 20px;
-  }
-  .chooseChampion{
-    margin: auto;
-    margin-top: 20px;
-  }
-  h4  {
-    margin: 0;
-    padding-top: 20px;
-  }
-/*   .graficVersus{
-    margin: 0;
-    padding: 0;
-  } */
-
-}
-@media all and (min-width:600px){
-
 .graficVersus{
-  height: 400px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
- width: 80%;
+  width: 45%;
 }
-.tabs{
-  flex-direction: row;
+#sectionDownload{
+
+  /* background: url(./public/thumb-1920-607280.png); */
+  background: url("public/red.png");  
+  width: 100%;
+  height: 580px;
+  background-position: center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  padding: 20px;
+  padding-top: 180px;
+  }
+.pVersus{    
+ 
+  padding: 20px;
+  font-size: 16px;
+  background: rgba(235, 225, 149, 0.72);
+  border-radius: 20px;
+  width: 85%;
+  margin: auto;
 }
-.sectionVersus{
-  height: 1750px;
+
+.bannere{  
+  margin-top: 0px;    
 }
-.versus{
-  height: 1730px;
+
+.versus h3{
+  font-size: 18px;
+  padding: 20px;
+  margin-bottom: 30px;
 }
+.header-content{
+
+ margin-top: 200px;
 }
-@media all and (min-width:900px){
-  .choose{
+#sectionHome{
+
+  background: url(./public/thumb-1920-607280.png);   
+  height: 580px;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  padding-top: 180px;
+  }
+/*   #sectionHome2{
+  margin-top: 190px;
+    background: url(./public/wallpaperfucs.jpg);
+    width: 100%;
+    height: 470px;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    padding-top: 290px;
+    } */
+  .divHome{
+
+  width: 35%;
+  border-radius: 50%;
+  height: 320px;
+  }
+ 
+  #h1Home{
+/*   padding: 10px; */
+margin-top: 40px;
+font-family: "Flamenco";
+  }
+  .pHome{
+padding: 30px;
+  }
+  #navDinamic ul{
+    max-width: 900px;
+   display: flex;
+   justify-content: space-evenly;
+  }
+  #sectionHome2 .divHome{
+/* margin-top: 400px; */
+    width: 30%;
+    border-radius: 50%;
+    height: 300px;
+    }
+    #sectionHome2 .divHome p {
+      /* margin-top: 400px; */
+           margin-top: 30px;
+            }
+    #sectionHome2{
+      /*  margin-top: 190px; */
+         background: url(./public/wallpaper.jpg);
+         width: 100%;
+         height: 600px;
+         background-position: center;
+         background-size: cover;
+         
+         padding: 20px;
+         padding-top: 200px;
+         }
+  .footerI {
+    width: 100%;
+    margin-top: 0px;
+    justify-content: space-around ;
+    align-items: center;
+    background: black;
+    display: flex;
+   /*  padding-top: 20px; */
     flex-direction: row;
     padding: 10px;
-    margin-top: -40px;
-    margin-bottom: 20px;
-  }
-  .sectionVersus{
-    height: 1450px;
-  }
-  .versus{
-    height: 1430px;
-  }
-  .pVersus{
-    margin: 10px;
-    padding: 20px;
-    font-size: 16px;
-    background: rgba(235, 225, 149, 0.72);
-    border-radius: 20px;
-  }
-
-}
-
-@media all and (min-width:1000px){
-  .graficVersus{
-    width: 45%;
-  }
-  #sectionDownload{
-
-    /* background: url(./public/thumb-1920-607280.png); */
-    background: url("public/red.png");  
-    width: 100%;
-    height: 580px;
-    background-position: center;
-    background-size: cover;
-    /* background-attachment: fixed; */
-    padding: 20px;
-    padding-top: 180px;
-    }
-  .pVersus{    
-   
-    padding: 20px;
-    font-size: 16px;
-    background: rgba(235, 225, 149, 0.72);
-    border-radius: 20px;
-    width: 85%;
-    margin: auto;
+    height: 100px;
   }
   
-  .bannere{  
-    margin-top: 0px;    
-  }
- 
-  .versus h3{
-    font-size: 18px;
-    padding: 20px;
-    margin-bottom: 30px;
-  }
-  .header-content{
- 
-   margin-top: 200px;
-  }
-  #sectionHome{
-
-    background: url(./public/thumb-1920-607280.png);   
-    height: 580px;
-    background-position: center;
-    background-size: cover;
-    padding: 20px;
-    padding-top: 180px;
-    }
-  /*   #sectionHome2{
-    margin-top: 190px;
-      background: url(./public/wallpaperfucs.jpg);
-      width: 100%;
-      height: 470px;
-      background-position: center;
-      background-size: cover;
-      padding: 20px;
-      padding-top: 290px;
-      } */
-    .divHome{
-  
-    width: 35%;
-    border-radius: 50%;
-    height: 320px;
-    }
-   
-    #h1Home{
-/*   padding: 10px; */
-margin-top: 40px;
-font-family: "Flamenco";
-    }
-    .pHome{
-  padding: 30px;
-    }
-    #navDinamic ul{
-      max-width: 900px;
-     display: flex;
-     justify-content: space-evenly;
-    }
-    #sectionHome2 .divHome{
-/* margin-top: 400px; */
-      width: 30%;
-      border-radius: 50%;
-      height: 300px;
-      }
-      #sectionHome2 .divHome p {
-        /* margin-top: 400px; */
-             margin-top: 30px;
-              }
-      #sectionHome2{
-        /*  margin-top: 190px; */
-           background: url(./public/wallpaper.jpg);
-           width: 100%;
-           height: 600px;
-           background-position: center;
-           background-size: cover;
-           
-           padding: 20px;
-           padding-top: 200px;
-           }
-    .footerI {
-      width: 100%;
-      margin-top: 0px;
-      justify-content: space-around ;
-      align-items: center;
-      background: black;
-      display: flex;
-     /*  padding-top: 20px; */
-      flex-direction: row;
-      padding: 10px;
-      height: 100px;
-    }
-    
 .footerI > .ulFooter {
-  display: flex;
-  list-style-type: none;
+display: flex;
+list-style-type: none;
 /*   padding-top: 10px; */
- justify-content: center;
+justify-content: center;
 
-  width: 40%;
-  margin-top: 10px;
- 
+width: 40%;
+margin-top: 10px;
+
 }
 .textFooter{
-  
-  width: 60%;
-  padding-top: 10px;
+
+width: 60%;
+padding-top: 10px;
 
 }
 
 }
+
 @media all and (min-width:1200px){ 
     .header-content{
      padding: 0;

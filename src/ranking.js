@@ -140,23 +140,13 @@ function graficAbility(ability) {
     google.charts.setOnLoadCallback(drawChartAbility);
 
     function drawChartAbility() {
-
+      /*   const indexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; */
         let arrayColors = ["#98E55B", "#F39C12", "#B479EC", "#3498DB", "#F0F3F4", "#FFC300", "#C70039", "#76D7C4", "#EC7063 ", "#E283C2"];
         let datas = google.visualization.arrayToDataTable([
 
             ['Element', 'Values', { role: 'style' }],
-            [arrayAbility[0].name, arrayAbility[0].info[ability], arrayColors[0]],
-            [arrayAbility[1].name, arrayAbility[1].info[ability], arrayColors[1]],
-            [arrayAbility[2].name, arrayAbility[2].info[ability], arrayColors[2]],
-            [arrayAbility[3].name, arrayAbility[3].info[ability], arrayColors[3]],
-            [arrayAbility[4].name, arrayAbility[4].info[ability], arrayColors[4]],
-            [arrayAbility[5].name, arrayAbility[5].info[ability], arrayColors[5]],
-            [arrayAbility[6].name, arrayAbility[6].info[ability], arrayColors[6]],
-            [arrayAbility[7].name, arrayAbility[7].info[ability], arrayColors[7]],
-            [arrayAbility[8].name, arrayAbility[8].info[ability], arrayColors[8]],
-            [arrayAbility[9].name, arrayAbility[9].info[ability], arrayColors[9]]
-
-        ]);
+            ...arrayColors.map((elem,index) => [arrayAbility[index].name, arrayAbility[index].info[ability], elem]),
+                  ]);
 
         let view = new google.visualization.DataView(datas);
         view.setColumns([0, 1,
@@ -227,13 +217,13 @@ function viewRanking(ability, arrayAbility) {
 }
 
 function topTemplateAbility(champion, ability) {
+
     return `
       <div class="divTop">
       <img class="imgTop" src=${champion.img} alt="">
         <p class="nameTop">
           <b>${champion.name}</b>
-        </p>
-      
+        </p>      
         <p class="puntajeTop">${champion.info[ability]}</p>
       </div>
     `

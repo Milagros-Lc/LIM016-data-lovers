@@ -3,11 +3,9 @@ import { dataChampions, isFilterRol } from './data.js';
 let arraychampion = [];
 let divChampion = document.getElementById("divShowChampions");
 let inputSearch = document.getElementById("inputSearch");
-
 let selectDificult = document.getElementById("selectDificult");
-/* let containerSlider = document.getElementById("slide-track"); */
 let arrayButton = ["All", "Fighter", "Marksman", "Mage", "Assassin", "Tank", "Support"];
-let button, btnRol = [], textButton, cards = [],array=[], rolChampion;
+let button, btnRol = [], textButton, cards = [], array = [], rolChampion;
 let cerrar = document.getElementById("close");
 let modal = document.getElementById("modal");
 let modalC = document.getElementById("modal-container");
@@ -17,12 +15,8 @@ let arrayNav = ["Champions", "Ranking", "Home", "Download", "Versus"];
 async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
-       
-        const URLactual = window.location;
-
-       /*  console.log("aaaaaaaaaaaaa",URLactual); */
-        
-         const urlM = "/champions";            //URL Milagros
+        const URLactual = window.location;       
+        const urlM = "/champions";            //URL Milagros
         //const urlM = "/src/champions.html"; //URL Mariana
         if (URLactual.pathname == urlM) {
             printNav();
@@ -30,8 +24,7 @@ async function carga() {
             printButton();
             searchChampion();
             OrderAlpha();
-difficulty();
-
+            difficulty();
         }
         else {
             printNav();
@@ -40,31 +33,13 @@ difficulty();
 }
 
 carga();
-/* function OrderAlpha() {
-    array=arraychampion;
-    let select = document.getElementById('selectAlpha');
-    select.addEventListener('change', function () {
-        divChampion.innerHTML = "";
-
-        let selectedOperation = select.options[select.selectedIndex].value;
-
-        function SortArray(x, y) {
-            return x.name.localeCompare(y.name);
-        }
-        selectedOperation == 'az' ? array.sort(SortArray).map(e => printChampions(e)) : array.reverse().map(e => printChampions(e));
-
-    });
-}
- */
 
 function OrderAlpha() {
-    array=arraychampion;
+    array = arraychampion;
     let select = document.getElementById('selectAlpha');
     select.addEventListener('change', function () {
         divChampion.innerHTML = "";
-
         let selectedOperation = select.options[select.selectedIndex].value;
-
         function SortArray(x, y) {
             return x.name.localeCompare(y.name);
         }
@@ -109,10 +84,10 @@ function difficulty() {
                     searchDificult = arraychampion;
                     break;
                 default:
-                   /*  console.log('default'); */
+                    /*  console.log('default'); */
                     break;
             }
-           /*  console.log("filter:", searchDificult); */
+            /*  console.log("filter:", searchDificult); */
             for (let index = 0; index < searchDificult.length; index++) {
                 const element = searchDificult[index];
                 printChampions(element);
@@ -401,15 +376,15 @@ function printNav() {
         list = document.createElement("li");
         enlace = document.createElement("a");
         enlace.href = arrayNavEnlaces[i];
-      /*   if (arrayNav[i] == arrayNav[2]) {
-            b = document.createElement("img");
-            enlace.appendChild(b);
-            b.src = arrayNav[2].toString();
-            enlace.href = arrayNavEnlaces[i];
-            // console.log(b);
-        } else {
-            enlace.textContent += arrayNav[i].toString();
-        } */
+        /*   if (arrayNav[i] == arrayNav[2]) {
+              b = document.createElement("img");
+              enlace.appendChild(b);
+              b.src = arrayNav[2].toString();
+              enlace.href = arrayNavEnlaces[i];
+              // console.log(b);
+          } else {
+              enlace.textContent += arrayNav[i].toString();
+          } */
         enlace.textContent += arrayNav[i].toString();
         list.appendChild(enlace);
         item.appendChild(list);
@@ -455,7 +430,7 @@ function printChampions(arraychampion) {
     let idcard = document.getElementById(arraychampion.key);
 
     idcard.addEventListener("click", function () {
-      /*   console.log("arraychampion.key:", arraychampion.key); */
+        /*   console.log("arraychampion.key:", arraychampion.key); */
         printModal(arraychampion);
     });
 
@@ -495,8 +470,6 @@ function filterByRole(btnRol) {
     if (rolId == "All") {
         recorrerData();
     } else
-
-
         isFilterRol(arraychampion, rolId).map(e => printChampions(e));
 
 }
