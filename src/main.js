@@ -15,9 +15,13 @@ let arrayNav = ["Champions", "Ranking", "Home", "Download", "Versus"];
 async function carga() {
     await dataChampions().then((data) => {
         arraychampion = data;
-        const URLactual = window.location;       
-        const urlM = "/champions";            //URL Milagros
-        //const urlM = "/src/champions.html"; //URL Mariana
+
+        const URLactual = window.location;
+
+        /*  console.log("URLactual",URLactual); */
+
+         const urlM = "/champions";      //URL Milagros
+        // const urlM = "/src/champions.html"; //URL Mariana
         if (URLactual.pathname == urlM) {
             printNav();
             recorrerData();
@@ -376,15 +380,6 @@ function printNav() {
         list = document.createElement("li");
         enlace = document.createElement("a");
         enlace.href = arrayNavEnlaces[i];
-        /*   if (arrayNav[i] == arrayNav[2]) {
-              b = document.createElement("img");
-              enlace.appendChild(b);
-              b.src = arrayNav[2].toString();
-              enlace.href = arrayNavEnlaces[i];
-              // console.log(b);
-          } else {
-              enlace.textContent += arrayNav[i].toString();
-          } */
         enlace.textContent += arrayNav[i].toString();
         list.appendChild(enlace);
         item.appendChild(list);
@@ -474,18 +469,7 @@ function filterByRole(btnRol) {
 
 }
 
-/* let arra = []; */
-
-//feliz como una lombriz
-
-/* Para obtener el texto */
-
-
-
 /* ----creando template para slideeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee --- */
-
-
-
 
 /* function slide() {
     let arraySlide = arraychampion.filter(e => (e.info.attack + e.info.defense + e.info.magic + e.info.difficulty) > 20);
